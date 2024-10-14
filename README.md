@@ -8,8 +8,17 @@ This project provides a Python solution to extract text, hyperlinks, images, and
 - Storage Options:
   - File Storage: Saves text, links, images, and tables into separate files.
   - SQL Storage: Stores extracted data into a MySQL database.
-  - 
-## Project Structure
+
+## Requirements
+<ul>
+<li>PyMuPDF: For handling PDFs.</li>
+<li>Camelot: For extracting tables from PDFs.</li>
+<li>python-docx: For handling DOCX files.</li>
+<li>python-pptx: For handling PPTX files.</li>
+<li>OpenCV: Required for Camelot table extraction.</li>
+<li>Ghostscript: Required for PDF handling in Camelot.</li>
+<li>Pandas: Used for managing table data.</li> </ul>
+## Project Structure 
 ```
 .
 ├── loaders
