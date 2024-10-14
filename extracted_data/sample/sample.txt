@@ -1,0 +1,29 @@
+Sample PDF Document
+This is a sample PDF document. It contains various types of content including text, a table, and an
+image placeholder. The goal is to extract these elements using Python.
+Column 1
+Column 2
+Column 3
+Column 4
+Row 1 Col 1
+Row 1 Col 2
+Row 1 Col 3
+Row 1 Col 4
+Row 2 Col 1
+Row 2 Col 2
+Row 2 Col 3
+Row 2 Col 4
+Row 3 Col 1
+Row 3 Col 2
+Row 3 Col 3
+Row 3 Col 4
+Row 4 Col 1
+Row 4 Col 2
+Row 4 Col 3
+Row 4 Col 4
+Row 5 Col 1
+Row 5 Col 2
+Row 5 Col 3
+Row 5 Col 4
+Image Placeholder (No actual image)
+[IMAGE]
