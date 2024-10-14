@@ -1,4 +1,4 @@
-# PDF, DOCX, and PPTX Data Extractor
+# Assignment-4-Python
 This project provides a Python solution to extract text, hyperlinks, images, and tables from PDF, DOCX, and PPTX files while capturing metadata such as file type. The project also includes functionality to store the extracted data in both files and a MySQL database.
 ## Features
 - Text Extraction: Extracts plain text from PDF, DOCX, and PPTX files along with metadata (font style, page number, slide number, headings).
@@ -18,9 +18,10 @@ This project provides a Python solution to extract text, hyperlinks, images, and
 <li>OpenCV: Required for Camelot table extraction.</li>
 <li>Ghostscript: Required for PDF handling in Camelot.</li>
 <li>Pandas: Used for managing table data.</li> </ul>
+
+
 ## Project Structure 
 ```
-.
 ├── loaders
 │   ├── file_loader.py       # Abstract base class for file loaders
 │   ├── pdf_loader.py        # PDF loader implementation
