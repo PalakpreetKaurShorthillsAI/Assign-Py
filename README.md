@@ -80,6 +80,8 @@ Unit tests are planned to cover the following aspects:
 - Image Extraction
 - Table extraction
 - MySQL data storage
+
+  
 To run unit tests: python3 -m unittest tests/test_extractor.py
 ```
 pytest tests/test_extractor.py
