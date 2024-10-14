@@ -33,11 +33,12 @@ This project provides a Python solution to extract text, hyperlinks, images, and
 │   └── file_storage.py      # Handles saving extracted data to files
 ├── tests
 │   └── test_extractor.py    # Unit tests for the extractors
-├── sample.pdf               # Sample PDF file for testing
-├── sample.docx              # Sample DOCX file for testing
-├── sample.pptx              # Sample PPTX file for testing
 ├── requirements.txt         # Dependencies
 └── README.md                # Project documentation
+|-- test_files/              # Test files (PDF, DOCX, PPTX) used for manual and unit testing
+    |-- pdf/
+    |-- docx/
+    |-- pptx/
 
 ```
 
