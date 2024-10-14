@@ -1,5 +1,32 @@
-# Assignment-4-Python
-This project provides a Python solution to extract text, hyperlinks, images, and tables from PDF, DOCX, and PPTX files while capturing metadata such as file type. The project also includes functionality to store the extracted data in both files and a MySQL database.
+# PDF, DOCX, and PPTX Data Extractor
+This project provides a modular Python solution to extract text, hyperlinks, images, and tables from PDF, DOCX, and PPTX files while capturing metadata such as file type, page/slide numbers, font styles, and more. The project also includes functionality to store the extracted data in both files and a MySQL database.
+## Project Structure
+```
+Python-Assignment/
+│
+│   ├── file_loader/
+│   │   ├── __init__.py
+│   │   ├── file_loader.py  # Abstract file loader class
+│   │   ├── pdf_loader.py   # Concrete class for handling PDFs
+│   │   ├── docx_loader.py  # Concrete class for handling DOCX files
+│   │   ├── ppt_loader.py   # Concrete class for handling PPT files
+│   │
+│   ├── data_extractor/
+│   │   ├── __init__.py
+│   │   ├── data_extractor.py  # Class for extracting text, images, links, tables from files
+│   │
+│   ├── storage/
+│   │   ├── __init__.py
+│   │   ├── file_storage.py  # Concrete class for storing data in files
+│   │   ├── sql_storage.py   # Concrete class for storing data in an SQL database
+│
+├── tests/
+│   ├── __init__.py
+├── requirements.txt   # Dependencies like PyMuPDF, python-docx, python-pptx, mysql-connector-python, etc.
+├── README.md          # Overview of the project and instructions
+└── testing.py         # Main script to run all the tests
+
+```
 ## Features
 - Text Extraction: Extracts plain text from PDF, DOCX, and PPTX files along with metadata (font style, page number, slide number, headings).
 - Hyperlink Extraction: Extracts URLs and linked text from PDF, DOCX, and PPTX files.
@@ -8,46 +35,11 @@ This project provides a Python solution to extract text, hyperlinks, images, and
 - Storage Options:
   - File Storage: Saves text, links, images, and tables into separate files.
   - SQL Storage: Stores extracted data into a MySQL database.
-
-## Requirements
-<ul>
-<li>PyMuPDF: For handling PDFs.</li>
-<li>Camelot: For extracting tables from PDFs.</li>
-<li>python-docx: For handling DOCX files.</li>
-<li>python-pptx: For handling PPTX files.</li>
-<li>OpenCV: Required for Camelot table extraction.</li>
-<li>Ghostscript: Required for PDF handling in Camelot.</li>
-<li>Pandas: Used for managing table data.</li> </ul>
-
-
-## Project Structure 
-```
-├── loaders
-│   ├── file_loader.py       # Abstract base class for file loaders
-│   ├── pdf_loader.py        # PDF loader implementation
-│   └── docx_loader.py       # DOCX loader implementation
-│   └── pptx_loader.py       # PPTX loader implementation
-├── extractors
-│   └── data_extract.py      # Data extraction logic for text, images, URLs, and tables
-├── storage
-│   └── file_storage.py      # Handles saving extracted data to files
-├── tests
-│   └── test_extractor.py    # Unit tests for the extractors
-├── requirements.txt         # Dependencies
-└── README.md                # Project documentation
-|-- test_files/              # Test files (PDF, DOCX, PPTX) used for manual and unit testing
-    |-- pdf/
-    |-- docx/
-    |-- pptx/
-
-```
-
 ## Installation
 - Clone the repo:
 ```
-git clone  https://github.com/PalakpreetKaurShorthillsAI/Assignment-4-Python.git
-
-cd Assignment-4-Python.git
+git clone https://github.com/your_username/pdf-docx-pptx-extractor.git
+cd pdf-docx-pptx-extractor
 ```
 - Set up a Python virtual environment and install dependencies:
 ```
@@ -65,7 +57,7 @@ DB_NAME=your_database
 ## Usage
 - Run the main script:
 ```
-python3 main.py
+python main.py
 ```
 - The extracted data will be saved in the output/ folder and organized into subfolders based on file type (PDF, DOCX, PPTX). Additionally, data will be stored in the MySQL database if configured correctly.
 ## Manual Testing
@@ -73,6 +65,7 @@ Test cases have been manually prepared and provided in the Excel file and can be
 - PDF: Small, large, corrupted PDFs.
 - DOCX: Small, large, corrupted DOCX files.
 - PPTX: Small, large, corrupted PPTX files.
+Please refer to the `test_files/` folder for these files.
 ## Unit Testing
 Unit tests are planned to cover the following aspects:
 - File validation and loading
@@ -81,9 +74,7 @@ Unit tests are planned to cover the following aspects:
 - Image Extraction
 - Table extraction
 - MySQL data storage
-
-  
-To run unit tests: python3 -m unittest tests/test_extractor.py
+To run unit tests:
 ```
 pytest tests/test_extractor.py
 ```
